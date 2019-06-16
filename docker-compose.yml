@@ -1,7 +1,7 @@
 version: '3.4'
 services:
  configservice:
-  image: chenchuxin/apollo
+  image: colinin/apollo-server
   environment:
   - spring_datasource_url=jdbc:mysql://localhost:3306/ApolloConfigDB?characterEncoding=utf8
   - spring_datasource_username=root
@@ -15,7 +15,7 @@ services:
   restart: always
 
  adminservice:
-  image: chenchuxin/apollo
+  image: colinin/apollo-server
   environment:
   - spring_datasource_url=jdbc:mysql://localhost:3306/ApolloConfigDB?characterEncoding=utf8
   - spring_datasource_username=root
@@ -31,7 +31,7 @@ services:
   restart: always
 
  portal:
-  image: chenchuxin/apollo
+  image: colinin/apollo-server
   environment:
   - spring_datasource_url=jdbc:mysql://localhost:3306/ApolloPortalDB?characterEncoding=utf8
   - spring_datasource_username=root
